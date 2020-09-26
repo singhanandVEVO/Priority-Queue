@@ -16,7 +16,6 @@ int findLastStone(int stones[],int N){
 	}
 	if(!maxHeap.empty())
 		lastStoneValue = maxHeap.top();
-
 	return lastStoneValue;
 }
 
@@ -32,11 +31,6 @@ int main(){
 		}
 		int lastStone = findLastStone(A,N);
 		cout<<"Last Stone : "<<lastStone<<"\n";
-	}
-		
+	}	
 	return 0;
 }
-
-
-
-//a n a n d x z s z s 
