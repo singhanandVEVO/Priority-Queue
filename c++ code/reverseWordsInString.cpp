@@ -8,12 +8,10 @@ string getReversedWordString(string originalString) {
     int i,size = originalString.size();
 
     for(i=size-1; i>=0; i--) {
-
         if(originalString[i] == Blankspace) {
             tempWordString += originalString[i];
             reversedString += tempWordString;
             tempWordString = "";
-
         } else {
             tempWordString = originalString[i] + tempWordString;
         };
@@ -26,23 +24,21 @@ string getReversedWordString(string originalString) {
 
 // leetcode problem solution 
 string getReverseWordStringExcludeSpace( string s) {
+    
     string reversedString = "", tempWordString = "";
     const char Blankspace = ' ';
     int i,size = s.size(), count = 0;
 
     for(i=size-1; i>=0; i--) {
-
         if(s[i] == Blankspace) {
             if(tempWordString == "") continue;
             count++;
             if(count > 1) {
                 reversedString +=  " " + tempWordString;
             } else {
-                reversedString += tempWordString;
-                
+                reversedString += tempWordString;   
             }
             tempWordString = "";
-
         } else {
             tempWordString = s[i] + tempWordString;
         };
@@ -52,9 +48,7 @@ string getReverseWordStringExcludeSpace( string s) {
     } else  {
         reversedString += tempWordString;
     }
-   
-    return reversedString;
-        
+    return reversedString;      
 }
 
 int main() {
